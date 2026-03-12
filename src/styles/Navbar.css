@@ -1,0 +1,92 @@
+@font-face {
+    font-family: 'Roc Grotesk ExtraWide Medium';
+    src: url('./fonts/rocgrotesk-extrawide-medium.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roc Grotesk Wide Regular';
+    src: url('./fonts/Roc_Grotesk_Wide_Regular.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+nav {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid #4a5568;
+}
+
+#nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+#nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+#nav-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+    letter-spacing: -0.3px;
+    font-family: 'Roc Grotesk ExtraWide Medium', sans-serif;
+}
+
+#nav-item2 {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+#nav-item2 a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    padding: 6px 0;
+    border-bottom: 2px solid transparent;
+    font-family: 'Roc Grotesk Wide Regular', sans-serif;
+    line-height: 0;
+}
+
+#nav-item2 a:hover {
+    color: #4a5568;
+}
+
+#nav-item2 a.active {
+    color: #1a2639;
+    border-bottom-color: #1a2639;
+}
+
+#logout-btn {
+    background: none;
+    border: 1px solid #4a5568;
+    padding: 8px 20px;
+    border-radius: 30px;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+    margin-left: auto;
+    font-family: 'Roc Grotesk Extrawide Medium';
+}
+
+#logout-btn:hover {
+    background-color: #f7fafc;
+    border-color: #cbd5e0;
+    color: #1a2639;
+}
+
+#logout-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.3);
+}

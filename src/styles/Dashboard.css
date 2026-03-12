@@ -1,0 +1,162 @@
+@font-face {
+    font-family: 'Roc Grotesk ExtraWide ExtraBold';
+    src: url('./fonts/Roc_Grotesk_Extrawide_Extrabold.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Coporate S Medium';
+    src: url('./fonts/Corporate_S_Medium.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roc Grotesk Wide Regular';
+    src: url('./fonts/Roc_Grotesk_Wide_Regular.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+#dashboard-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem 10rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#title #mini-title {
+    background-image: linear-gradient(to top left, #a5f3fc, #6366f1, #22d3ee);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-family: 'Coporate S Medium';
+    font-size: 1.2rem;
+}
+
+#title #main-title {
+    color: white;
+    font-family: 'Roc Grotesk ExtraWide ExtraBold';
+    font-size: 2rem;
+    line-height: 0;
+}
+
+#title #main-title span {
+    background-image: linear-gradient(to right, #a5f3fc, #6366f1, #22d3ee);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+#title #email-subtitle {
+    color: #6d788b;
+}
+
+#tasks-stat {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    width: 100%;
+}
+
+.stat-items {
+    background-color: none;
+    background-color: #16161f;
+    border: 2px solid #272736;
+    border-radius: 0.8rem;
+    height: 10rem;
+    padding: 1rem 1rem 1rem 3rem;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.stat-labels {
+    color: #475264;
+    font-family: 'Coporate S Medium';
+    font-size: 1.2rem;
+    line-height: 0;
+}
+
+#total-stat {
+    font-size: 2.5rem;
+    color: #6366f1;
+    font-family: 'Roc Grotesk ExtraWide ExtraBold';
+    line-height: 0;
+}
+
+#complete-stat {
+    font-size: 2.5rem;
+    color: #86efac;
+    font-family: 'Roc Grotesk ExtraWide ExtraBold';
+    line-height: 0;
+}
+
+#pending-stat {
+    font-size: 2.5rem;
+    color: #f87171;
+    font-family: 'Roc Grotesk ExtraWide ExtraBold';
+    line-height: 0;
+}
+
+#task-progress {
+    margin-top: 2rem;
+    width: 100%;
+    background: #16161f;
+    border: 2px solid #272736;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-sizing: border-box;
+}
+
+#progress-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+#progress-subtitle {
+    color: white;
+    font-family: 'Roc Grotesk Wide Regular', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0;
+    line-height: 0;
+}
+
+#progress-progress-percentage {
+    font-family: 'Roc Grotesk Wide Regular', sans-serif;
+    font-size: 1.5rem;
+    color: #86efac;
+    font-weight: bold;
+}
+
+#progress {
+    width: 100%;
+    height: 1rem;
+    background: #272736;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+}
+
+#progress::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: var(--progress-width, 0%);
+    background: linear-gradient(90deg, #6366f1, #22d3ee);
+    border-radius: 1rem;
+    transition: width 0.3s ease;
+}

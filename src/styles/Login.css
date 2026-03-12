@@ -1,0 +1,100 @@
+@font-face {
+    font-family: 'Roc Grotesk ExtraWide Medium';
+    src: url('./fonts/rocgrotesk-extrawide-medium.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Coporate S Medium';
+    src: url('./fonts/Corporate_S_Medium.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+#login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#login-container {
+    margin-top: 8%;
+}
+
+#login-title {
+    font-family: 'Roc Grotesk ExtraWide Medium', sans-serif;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#login-subtitle {
+    font-family: sans-serif;
+    color: #374151;
+    text-align: center;
+    line-height: 0.1rem;
+}
+
+#login-container {
+    width: 23vw;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: #16161f;
+    border-radius: 1rem;
+    gap: 1.4rem;
+    border: 1px solid #272736;
+}
+
+.login-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-input label {
+    color: #475569;
+    font-family: 'Corporate S Medium', sans-serif;
+    font-size: 0.8rem;
+}
+
+.login-input input {
+    height: 2rem;
+    background-color: #09090d;
+    border-radius: 0.2rem;
+    border: 1px solid #272736;
+    padding: 0.2rem 0 0.2rem 0.6rem;
+    color: #a3a3a3;
+}
+
+#login-btn {
+    width: 100%;
+    height: 2.4rem;
+    border-radius: 0.6rem;
+    background: conic-gradient(at top left, #4338ca, #6366f1, #a5b4fc);
+    border: none;
+    color: white;
+    transition: ease-in-out 0.2s;
+}
+
+#login-btn:hover{
+    transform: scale(1.04);
+    cursor: pointer;
+}
+
+#form-subtitle {
+    font-family: sans-serif;
+    color: #374151;
+    font-size: 0.8rem;
+    text-align: center  ;
+}
+
+#form-error {
+    color: red;
+    font-size: 0.7rem;
+    font-family: sans-serif;
+    line-height: 0.1rem;
+}
