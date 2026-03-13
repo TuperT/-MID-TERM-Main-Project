@@ -1,4 +1,5 @@
 # TR School Midterm Project
+Some of the styling in the image does not represent the new website styling
 <img width="1851" height="929" alt="image" src="https://github.com/user-attachments/assets/71e906ec-13f6-4e2a-b3fc-08f18e9307b5" />
 <img width="1856" height="944" alt="image" src="https://github.com/user-attachments/assets/46507222-33d7-4ba7-88e2-4b0d6ca48181" />
 <img width="1854" height="545" alt="image" src="https://github.com/user-attachments/assets/a213a7a5-5942-4f6c-a58b-3c717827d758" />
