@@ -1,10 +1,12 @@
 import { useContext } from 'react'
+import { useNavigate } from 'react-router'
 import Navbar from '../components/Navbar'
 import '../styles/Dashboard.css'
 import { AuthContext } from '../context/AuthContext'
 import { TaskContext } from '../context/TaskContext'
 
 const Dashboard = () => {
+    const Navigate = useNavigate()
     const { state: authState } = useContext(AuthContext)
     const { state: taskState, CompleteTask, DeleteTask, UndoTask } = useContext(TaskContext)
     
@@ -18,6 +20,7 @@ const Dashboard = () => {
     const completionPercentage = totalTask > 0 
         ? Math.min(Math.round((completeTask / totalTask) * 100), 100) 
         : 0
+
 
     return (
         <main>
@@ -57,7 +60,16 @@ const Dashboard = () => {
                     ></div>
                 </div>
 
-                <div id="task-container">
+                <div id="recent-task-title">
+                    <p id='recent-task-subtitle'>Recent Tasks</p>
+                    <div id="recent-task-main">
+                        <button id='recent-button' onClick={() => Navigate("/tasks")}>
+                            View All
+                        </button>
+                    </div>
+                </div>
+
+                <div id="task-container2">
                     {viewtask.length > 0 ? (
                         viewtask.map((item, index) => (
                             <div id='task-child' key={index} className={`div${item.taskPriority}`}>

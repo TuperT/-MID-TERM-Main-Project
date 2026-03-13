@@ -63,7 +63,6 @@ const Tasks = () => {
     return (
         <main>
             <Navbar />
-
             <div id="task-container">
                 <div id="title">
                     <p id="mini-title">TASK MANAGER</p>

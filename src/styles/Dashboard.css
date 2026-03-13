@@ -19,6 +19,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Roc Grotesk Wide Bold';
+    src: url('./fonts/Roc_Grotesk_Wide_Bold.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+}
+
 #dashboard-container {
     display: flex;
     flex-direction: column;
@@ -159,4 +166,46 @@
     background: linear-gradient(90deg, #6366f1, #22d3ee);
     border-radius: 1rem;
     transition: width 0.3s ease;
+}
+
+#recent-task-subtitle {
+    color: white;
+    font-family: 'Roc Grotesk Wide Bold';
+}
+
+#recent-button {
+    background: none;
+    border: 1px solid #4a5568;
+    padding: 8px 20px;
+    border-radius: 30px;
+    color: #6366f1;
+    font-size: 0.7rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+    margin-left: auto;
+    font-family: 'Roc Grotesk Extrawide Medium';
+}
+
+#recent-task-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+#recent-button:hover {
+    background-color: #f7fafc;
+    border-color: #cbd5e0;
+    color: #1a2639;
+}
+
+#recent-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.3);
+}
+
+#recent-task-main {
+    margin-left: auto;
 }

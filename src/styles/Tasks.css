@@ -1,32 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+@font-face {
+    font-family: 'Coporate S Medium';
+    src: url('./fonts/Corporate_S_Medium.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roc Grotesk Wide Regular';
+    src: url('./fonts/Roc_Grotesk_Wide_Regular.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+}
 
 /* ─── LAYOUT ────────────────────────────────────────────────────── */
 body {
     overflow-x: hidden;
 }
 
-main {
-  min-height: 100vh;
-  background:
-    radial-gradient(ellipse 60% 40% at 70% 0%, rgba(124,106,247,0.08) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 30% at 10% 80%, rgba(62,207,142,0.05) 0%, transparent 60%),
-    #0c0c0f;
-}
-
 #task-container {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 48px 24px 80px;
+  margin: 0 0 0 12rem;
+  padding: 1rem 2rem 10rem 0rem;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+}
+
+#task-container2 {
+  max-width: 1200px;
+  padding: 1rem 2rem 10rem 0rem;
+  display: flex;
+  flex-direction: column; 
 }
 
 /* ─── TITLE BLOCK ───────────────────────────────────────────────── */
 #title {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  line-height: 1rem;
 }
 
 #mini-title {
@@ -43,15 +54,15 @@ main {
   font-size: clamp(32px, 5vw, 48px);
   font-weight: 800;
   color: #e8e8f0;
-  line-height: 1.1;
+  line-height: 0;
   letter-spacing: -0.02em;
 }
 
 #email-subtitle {
   font-size: 12px;
   color: #6b6b80;
-  font-style: italic;
-  margin-top: 2px;
+  margin-top: 0px;
+  font-family: 'Coporate S Medium';
 }
 
 /* ─── FORM CARD ─────────────────────────────────────────────────── */
@@ -64,6 +75,7 @@ main {
   flex-direction: column;
   gap: 20px;
   transition: border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  max-width: 1050px;
 }
 
 #task-form:focus-within {
@@ -76,7 +88,7 @@ main {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #6b6b80;
+  color: white;
 }
 
 #form-error {
@@ -104,7 +116,7 @@ main {
   font-size: 9px;
   font-weight: 500;
   letter-spacing: 0.18em;
-  text-transform: uppercase;
+  font-family: 'Roc Grotesk Wide Regular';
   color: #6b6b80;
 }
 
@@ -174,10 +186,11 @@ main {
   gap: 6px;
   font-size: 11px;
   font-weight: 400;
+  font-family: 'Coporate S Medium', sans-serif;
   letter-spacing: 0.05em;
   color: #6b6b80;
   cursor: pointer;
-  padding: 7px 12px;
+  padding: 14px 2rem;
   border-radius: 99px;
   border: 1px solid rgba(255,255,255,0.07);
   background: #1c1c27;
@@ -222,12 +235,14 @@ main {
 
 /* ─── FILTER TABS ───────────────────────────────────────────────── */
 #task-filter {
+  margin-top: 1rem;
   display: flex;
   gap: 4px;
   background: #13131a;
   border: 1px solid rgba(255,255,255,0.07);
   border-radius: 8px;
   padding: 4px;
+  max-width: 68.5rem;
 }
 
 .filter-btn {
@@ -248,7 +263,7 @@ main {
 .filter-btn:hover { color: #e8e8f0; }
 
 .filter-btn.active {
-  background: #1c1c27;
+  background: #7c6af7;
   color: #e8e8f0;
   box-shadow: inset 0 0 0 1px rgba(255,255,255,0.12);
 }
@@ -258,6 +273,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin-top: 1rem;
 }
 
 #no-task {
@@ -280,6 +296,7 @@ main {
   transition: border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+  width: 67rem;
 }
 
 #task-child::before {
